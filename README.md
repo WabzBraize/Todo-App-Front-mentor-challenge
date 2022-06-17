@@ -7,3 +7,4 @@
    -Mark completed todos
    Filter todos
    
+![App screenshot](active-states-dark.jpg)
