@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Todo app</title>
+  <!-- Custom stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../font/css/all.css">
+</head>
+
+<body>
+
+  <div class="banner"></div>
+  <div class="todo-wrapper">
+    <div class="todo-header">
+      <h2 class="title">TODO</h2>
+      <img src="images/icon-sun.svg" alt="">
+    </div>
+    <form action="" id="todoForm">
+      <div class="input-group">
+        <i class="far fa-circle input-icon" for="addTodo"></i>
+        <input type="text" name="" id="addTodoField" class="form-control" placeholder="Create a new todo....">
+      </div>
+    </form>
+    <div class="todo-body">
+      <ul id="todos"></ul>
+      <div class="todo-footer">
+        <div class="items-left" id="ItemsLeft"> </div>
+        <div class="status">
+          <p class="active toggle_todos allTodos">All</p>
+          <p class="toggle_todos activeTodos">Active</p>
+          <p id="completedTodos" class="toggle_todos completed">Completed</p>
+        </div>
+        <div class="clear" id="completed">
+          <p>Clear Completed</p>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <h4>Drag and Drop to reorder todos</h4>
+    </div>
+  </div>
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.</p>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

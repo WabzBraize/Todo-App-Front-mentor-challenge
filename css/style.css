@@ -1,0 +1,238 @@
+:root {
+  --dark-blue: hsl(235, 21%, 11%);
+  --dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark-blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+::placeholder {
+  color: var(--light-grayish-blue);
+  font-weight: 300;
+}
+
+/* Custom Styles */
+
+.banner {
+  height: 200px;
+  background: url("../images/bg-desktop-dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.todo-wrapper {
+  max-width: 450px;
+  width: 95%;
+  margin: -8rem auto;
+  position: relative;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+
+.todo-header h2.title {
+  letter-spacing: 1rem;
+}
+
+.todo-header img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.input-group {
+  width: 100%;
+  height: 37px;
+  position: relative;
+}
+
+.form-control {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--dark-desaturated-blue);
+  left: 0;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  padding: 0 2rem;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--light-grayish-blue);
+}
+
+.input-icon {
+  position: absolute;
+  z-index: 2;
+  left: 0.5rem;
+  top: 50%;
+  color: var(--very-dark-grayish-blue);
+  transform: translateY(-50%);
+}
+
+.todo-body {
+  background: var(--dark-desaturated-blue);
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+ul#todos {
+  list-style: none;
+}
+
+ul#todos li {
+  color: var(--light-grayish-blue);
+  font-weight: 300;
+  border-bottom: 1px solid var(--very-dark-grayish-blue);
+  padding: 1rem 0.5rem;
+  cursor: move;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--dark-desaturated-blue);
+  position: relative;
+}
+
+ul#todos li i{
+  cursor: pointer;
+}
+
+ul#todos .item {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul#todos li:hover {
+  margin-left: 0.2rem;
+}
+
+i {
+  font-size: 1.2rem;
+  color: var(--very-dark-grayish-blue);
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  height: 1rem;
+  top: 0;
+  display: none;
+  cursor: pointer;
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  line-height: 60px;
+}
+
+ul#todos li:hover .delete {
+  display: block;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--very-dark-grayish-blue);
+  padding: 0.7rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.status {
+  display: flex;
+}
+
+.status p {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: padding-left 0.2s ease-in-out;
+}
+
+.status p:hover {
+  padding-left: 0.2rem;
+}
+
+.status p.active {
+  color: hsl(228, 45%, 44%);
+}
+
+.clear {
+  cursor: pointer;
+}
+
+.info {
+  text-align: center;
+}
+
+.info h4 {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: var(--very-dark-grayish-blue);
+}
+
+.attribution {
+  color: hsl(234, 11%, 52%);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-family: inherit;
+  font-size: inherit;
+  color: hsl(228, 45%, 44%);
+}
+
+.fall {
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.over {
+  background: #220000 !important;
+  opacity: 0.6;
+}
+
+@media (max-width: 500px) {
+  .info {
+    position: absolute;
+    bottom: -5rem;
+    left: 0;
+    right: 0;
+  }
+  .status {
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+    background: var(--dark-desaturated-blue);
+    width: 100%;
+    padding: 0.3rem 4rem;
+    justify-content: space-around;
+  }
+}
